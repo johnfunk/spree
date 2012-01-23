@@ -1,9 +1,11 @@
 Dear Customer,
 
-Please review and retain the following order information for your records.
+Get ready for stickers!  
+
+The Ferryman is heading to the underworld to grab your stash.  Your stickers should arrive in about a week (or faster, depending on the current).
 
 ============================================================
-Order Summary
+Stickers ordered:
 ============================================================
 <% @order.line_items.each do |item| %>
 <%=item.variant.sku %> <%=item.variant.product.name%> <%= item.variant.options_text -%> (<%=item.quantity%>) @ <%= number_to_currency item.price %> = <%= number_to_currency(item.price * item.quantity) %>
@@ -16,4 +18,6 @@ Subtotal: <%= number_to_currency @order.item_total %>
 Order Total: <%= number_to_currency @order.total %>
 
 
-Thank you for your business.
+Thank you.
+
+- The Ferryman and the StyxRyvr Crew
